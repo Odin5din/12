@@ -15,5 +15,5 @@ interface kakao_interface {
         @Query("sort") sort: String?,
         @Query("page") page: Int,
         @Query("size") size: Int
-    ): Response<ImageSearchResponse>
+    ):  Call<KakaoModel?>?
 }

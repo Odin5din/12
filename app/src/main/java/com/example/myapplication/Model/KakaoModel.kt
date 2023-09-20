@@ -3,7 +3,7 @@ package com.example.myapplication.data
 import com.google.gson.annotations.SerializedName
 import org.w3c.dom.Document
 
-data class ImageSearchResponse (
+data class KakaoModel (
     @SerializedName("documents")
     val documents: ArrayList<Documents>,
 
