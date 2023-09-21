@@ -1,4 +1,4 @@
-package com.example.myapplication.View
+package com.example.myapplication
 
 import android.content.Context
 import android.os.Bundle
@@ -11,17 +11,14 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import com.example.myapplication.Model.RecyclerViewItem
-import com.example.myapplication.Model.Retrofit_client.apiService
-import com.example.myapplication.R
-import com.example.myapplication.SearchAdapter
+import com.example.myapplication.model.RecyclerViewItem
+import com.example.myapplication.model.Retrofit_client.apiService
 import com.example.myapplication.Utils.Utils
-import com.example.myapplication.data.KakaoModel
+import com.example.myapplication.model.KakaoModel
 import com.example.myapplication.databinding.FragmentFirstBinding
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.http.Query
 
 class FirstFragment : Fragment() {
 

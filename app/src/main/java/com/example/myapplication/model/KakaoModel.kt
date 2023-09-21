@@ -1,7 +1,6 @@
-package com.example.myapplication.data
+package com.example.myapplication.model
 
 import com.google.gson.annotations.SerializedName
-import org.w3c.dom.Document
 
 data class KakaoModel (
     @SerializedName("documents")

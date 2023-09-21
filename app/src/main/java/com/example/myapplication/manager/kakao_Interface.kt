@@ -1,14 +1,14 @@
-package com.example.myapplication.data
+package com.example.myapplication.manager
 
+import com.example.myapplication.model.KakaoModel
 import retrofit2.http.GET
 import retrofit2.http.Header
 import retrofit2.http.Query
 import retrofit2.Call
-import retrofit2.Response
 
 interface kakao_interface {
 
-    @GET("https://dapi.kakao.com/v2/search/web")
+    @GET("v2/search/image")
     fun kakao_image_search(
         @Header("Authorization") apiKey: String? = "KakaoAK 031dcfb15b0e58f859ab7a807508be70",
         @Query("query") query: String?,

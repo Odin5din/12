@@ -9,11 +9,11 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.myapplication.Model.RecyclerViewItem
+import com.example.myapplication.model.RecyclerViewItem
 import com.example.myapplication.Utils.Utils.getDateFromTimestampWithFormat
 import com.example.myapplication.databinding.SearchItemBinding
 
-class LikeAdapter(var context2: Context) : RecyclerView.Adapter<LikeAdapter.ItemViewHolder>() {
+class LikeAdapter(var context1: Context) : RecyclerView.Adapter<LikeAdapter.ItemViewHolder>() {
     var items = mutableListOf<RecyclerViewItem>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
@@ -22,7 +22,7 @@ class LikeAdapter(var context2: Context) : RecyclerView.Adapter<LikeAdapter.Item
     }
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
-        Glide.with(context2)
+        Glide.with(context1)
             .load(items[position].url)
             .into((holder as ItemViewHolder).iconImage)
 
@@ -49,7 +49,7 @@ class LikeAdapter(var context2: Context) : RecyclerView.Adapter<LikeAdapter.Item
 
             recyclerViewItem.setOnClickListener {
                 val position = adapterPosition
-                (context2 as MainActivity).removeLikedItem(items[position])
+                (context1 as MainActivity).removeLikedItem(items[position])
 
                 if (position != RecyclerView.NO_POSITION) {
                     items.removeAt(position)

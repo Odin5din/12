@@ -4,9 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
-import com.example.myapplication.Model.RecyclerViewItem
-import com.example.myapplication.View.FirstFragment
-import com.example.myapplication.View.SecondFragment
+import com.example.myapplication.model.RecyclerViewItem
 import com.example.myapplication.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
