@@ -83,7 +83,7 @@ class FirstFragment : Fragment() {
 
     private fun fetchImageResults(query: String) {
         apiService.kakao_image_search(
-            "KakaoAK 4047252062067a053aa65bc9c7789c945", query, "recency", 1, 80
+            "KakaoAK 031dcfb15b0e58f859ab7a807508be70", query, "recency", 1, 80
         )?.enqueue(object : Callback<KakaoModel?> {
             override fun onResponse(call: Call<KakaoModel?>, response: Response<KakaoModel?>) {
                 response.body()?.meta?.let { meta ->

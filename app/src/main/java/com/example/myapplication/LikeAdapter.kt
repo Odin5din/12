@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.myapplication.Model.RecyclerViewItem
 import com.example.myapplication.Utils.Utils.getDateFromTimestampWithFormat
-import com.example.myapplication.View.MainActivity
 import com.example.myapplication.databinding.SearchItemBinding
 
 class LikeAdapter(var context2: Context) : RecyclerView.Adapter<LikeAdapter.ItemViewHolder>() {

@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.myapplication.LikeAdapter
+import com.example.myapplication.MainActivity
 import com.example.myapplication.Model.RecyclerViewItem
-import com.example.myapplication.R
 import com.example.myapplication.databinding.FragmentSecondBinding
 
 
