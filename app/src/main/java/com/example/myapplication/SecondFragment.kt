@@ -29,7 +29,6 @@ class SecondFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         val mainActivity = activity as MainActivity
         likedItems = mainActivity.likedItems
 
@@ -37,10 +36,12 @@ class SecondFragment : Fragment() {
             items = likedItems.toMutableList()
         }
 
-        binding = FragmentSecondBinding.inflate(inflater, container, false).apply {
+        binding = FragmentSecondBinding.inflate(inflater, container,false).apply {
             likeItem.layoutManager = StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL)
             likeItem.adapter = adapter
         }
+
+
 
         return  binding?.root
     }
@@ -49,6 +50,10 @@ class SecondFragment : Fragment() {
         super.onDestroyView()
         binding = null
     }
+
+
+
+
 
 
 }

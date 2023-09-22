@@ -30,13 +30,13 @@ object Utils {
     }
 
     fun saveLastSearch(context: Context, query: String) {
-        val prefs = context.getSharedPreferences("", Context.MODE_PRIVATE)
-        prefs.edit().putString("", query)
+        val prefs = context.getSharedPreferences("com.example.myapplication.prefs", Context.MODE_PRIVATE)
+        prefs.edit().putString("IMAGE_SEARCH_PREF", query)
     }
 
     fun getLastSearch(context: Context): String? {
-        val prefs = context.getSharedPreferences("", Context.MODE_PRIVATE)
-        return prefs.getString("", null)
+        val prefs = context.getSharedPreferences("com.example.myapplication.prefs", Context.MODE_PRIVATE)
+        return prefs.getString("IMAGE_SEARCH_PREF", null)
     }
 
 }

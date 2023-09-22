@@ -21,12 +21,15 @@ class SearchAdapter(private val context1: Context) :
         items.clear()
         notifyDataSetChanged()
     }
+
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
     ): SearchAdapter.ItemViewHolder {
         val binding = SearchItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ItemViewHolder(binding)
+
+
     }
 
     override fun onBindViewHolder(holder: SearchAdapter.ItemViewHolder, position: Int) {
@@ -39,12 +42,11 @@ class SearchAdapter(private val context1: Context) :
         holder.like.visibility = if (currentItem.isLike) View.VISIBLE else View.INVISIBLE
         holder.title.text = currentItem.title
         holder.datetime.text = getDateFromTimestampWithFormat(
-            currentItem.dateTime, "", ""
+            currentItem.dateTime, "yyyy-MM-dd'T'HH:mm:ss.SSS+09:00", "yyyy-MM-dd HH:mm:ss"
         )
     }
 
-    override fun getItemCount(): Int =
-        items.size
+    override fun getItemCount(): Int = items.size
 
 
     inner class ItemViewHolder(binding: SearchItemBinding) : RecyclerView.ViewHolder(binding.root),

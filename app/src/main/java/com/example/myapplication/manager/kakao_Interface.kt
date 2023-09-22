@@ -10,7 +10,7 @@ interface kakao_interface {
 
     @GET("v2/search/image")
     fun kakao_image_search(
-        @Header("Authorization") apiKey: String? = "KakaoAK 031dcfb15b0e58f859ab7a807508be70",
+        @Header("Authorization") apiKey: String?,
         @Query("query") query: String?,
         @Query("sort") sort: String?,
         @Query("page") page: Int,
