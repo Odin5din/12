@@ -9,8 +9,8 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.model.RecyclerViewItem
-import com.example.myapplication.databinding.SearchItemBinding
 import com.bumptech.glide.Glide
+import com.example.api.databinding.SearchItemBinding
 import com.example.myapplication.Utils.Utils.getDateFromTimestampWithFormat
 
 class SearchAdapter(private val context1: Context) :

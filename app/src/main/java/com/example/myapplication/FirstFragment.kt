@@ -11,11 +11,11 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.example.api.databinding.FragmentFirstBinding
 import com.example.myapplication.model.RecyclerViewItem
 import com.example.myapplication.model.Retrofit_client.apiService
 import com.example.myapplication.Utils.Utils
 import com.example.myapplication.model.KakaoModel
-import com.example.myapplication.databinding.FragmentFirstBinding
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -23,8 +23,6 @@ import retrofit2.Response
 class FirstFragment : Fragment() {
 
     private lateinit var binding: FragmentFirstBinding
-    private lateinit var editTextSearch: EditText
-    private lateinit var buttonSearch: Button
     private lateinit var adapter: SearchAdapter
     private lateinit var adapterimage: StaggeredGridLayoutManager
     private lateinit var context1: Context
@@ -44,10 +42,9 @@ class FirstFragment : Fragment() {
         performSearch()
 
 
-        editTextSearch = binding.edtSearch
-        buttonSearch = binding.btnSearch
 
-        buttonSearch.setOnClickListener {
+
+        binding.btnSearch.setOnClickListener {
             performSearch()
         }
 
@@ -68,7 +65,7 @@ class FirstFragment : Fragment() {
 
 
     private fun performSearch() {
-        val query = editTextSearch.text.toString()
+        val query = binding.edtSearch.text.toString()
         if (query.isNotEmpty()) {
             Utils.saveLastSearch(requireContext(), query)
             adapter.clearItem()

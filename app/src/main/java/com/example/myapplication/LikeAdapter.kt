@@ -9,9 +9,9 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.api.databinding.SearchItemBinding
 import com.example.myapplication.model.RecyclerViewItem
 import com.example.myapplication.Utils.Utils.getDateFromTimestampWithFormat
-import com.example.myapplication.databinding.SearchItemBinding
 
 class LikeAdapter(var context1: Context) : RecyclerView.Adapter<LikeAdapter.ItemViewHolder>() {
     var items = mutableListOf<RecyclerViewItem>()

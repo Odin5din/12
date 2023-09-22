@@ -4,8 +4,10 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
+import com.example.api.R
+import com.example.api.databinding.ActivityMainBinding
 import com.example.myapplication.model.RecyclerViewItem
-import com.example.myapplication.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,6 +17,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 
